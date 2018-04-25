@@ -32,7 +32,9 @@ public class CommonUtil {
 	}
 
 	/**
-	 * Format money
+	 * Formatting currency to corresponding country pattern. 
+	 * @param money
+	 * @return
 	 */
 	public static String moneyFormat(Double money) {
 		//$:"###,###.##$"; ¥:"###,###.##￥" ;
@@ -41,6 +43,11 @@ public class CommonUtil {
 		return moneyStr;
 	}
 
+	/**
+	 * Formating Date to pattern("yyyy/MM/dd").
+	 * @param date
+	 * @return
+	 */
 	public static String dateFormat(Date date) {
 		DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 		format.setTimeZone(TimeZone.getTimeZone("GMT+8"));
