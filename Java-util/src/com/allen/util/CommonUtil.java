@@ -14,14 +14,6 @@ import java.util.TimeZone;
 public class CommonUtil {
 
 	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-
-	
-	}
-	
-	/**
 	 * Format java.util.Date to "GMT+8" time
 	 */
 	private static void dateFormat(){
