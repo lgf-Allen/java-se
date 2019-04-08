@@ -1,6 +1,6 @@
 ## Java集合关系总览
 
-![Java集合关系总览](https://note.youdao.com/yws/api/personal/file/C755AAB98A424437B67BD996DA6ADCAA?method=download&shareKey=132203191833cec1425cb9d5fe3e193e)
+![Java集合关系总览](src/resources/Java集合框架.png)
 
 ## 1. List
 - List的官方解释
