@@ -1,6 +1,7 @@
 ## 1. 设置GC的常用命令
-| ---- | ---- |
+
 | 参数 | 含义 |
+| ---- | ---- |
 | -XX:PrintGC | 打印GC日志 |
 | -XX:+PrintGCDetails | 打印详细的GC日志,还会在退出前打印堆的详细信息 |
 | -XX:+PrintHeapAtGC | 每次GC前后打印堆信息 |
