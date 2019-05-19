@@ -1,6 +1,6 @@
 ## Java集合关系总览
 
-![Java集合关系总览](src/resources/Java集合框架.png)
+![Java集合关系总览](src/main/resources/Java集合框架.png)
 
 ## 1. List
 - List的官方解释
@@ -35,6 +35,43 @@ An ordered collection (also known as a <i>sequence</i>).   The The user of this 
 ## 4. Map
 ### 4.1 Map的数据结构
 ### 4.2 HashMap
+   
+#### 4.2.1 定义
+> `HashMap` 是一个散列表，它存储的内容是键值对(key-value)映射。
+
+#### 4.2.2 几个关键属性
+- Entry[] table ：Entry实际上是一个单向链表
+- size: HashMap的大小
+- threshold: 是HashMap的阈值，等于容量(capacity)*负载因子(loadFactory)
+- modCount: 是用来实现fail-fast机制的
+- loadFactor: 负载因子   
+
+#### 4.2.3 通过“拉链法”实现Hash表
+```java
+/**
+ * 
+ * 判断两个Entry是否相等:
+ * 若两个Entry的“key”和“value”都相等，则返回true。否则，返回false
+ *
+ */
+public final boolean equals(Object o) {
+    if (o == this)
+        return true;
+    if (o instanceof Map.Entry) {
+        Map.Entry<?,?> e = (Map.Entry<?,?>)o;
+        if (Objects.equals(key, e.getKey()) &&
+            Objects.equals(value, e.getValue()))
+            return true;
+    }
+    return false;
+}
+```
+
+#### 4.2.4 HashMap的几种遍历方式
 ### 4.3 TreeMap
 ### 4.4 Hashtable
 ### 4.5 LinkedHashMap
+
+----
+## 5. Stack
+### 5.1 Stack的数据结构
